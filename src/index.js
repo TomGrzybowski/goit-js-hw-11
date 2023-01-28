@@ -48,7 +48,7 @@ function handleSubmit(event) {
       Notiflix.Notify.success(`Hooray! We found ${results.totalHits} images.`);
     }
   });
-  window.addEventListener('scroll', _.throttle(handleScroll, 1000));
+  window.addEventListener('scroll', _.throttle(handleScroll, 500));
 }
 
 pagesLoaded = 1;
