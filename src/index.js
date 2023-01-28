@@ -41,7 +41,7 @@ function handleSubmit(event) {
       );
     } else if (imagesLoaded >= hits) {
       Notiflix.Notify.failure(
-        "We're sorry, but you've reached the end of search results."
+        "We're really sorry, but you've reached the end of search results."
       );
     } else {
       renderCards(results.hits);
