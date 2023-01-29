@@ -48,7 +48,7 @@ function handleSubmit(event) {
       Notiflix.Notify.success(`Hooray! We found ${results.totalHits} images.`);
     }
   });
-  window.addEventListener('scroll', _.throttle(handleScroll, 500));
+  window.addEventListener('scroll', _.throttle(handleScroll, 1000));
 }
 
 pagesLoaded = 1;
@@ -119,6 +119,9 @@ function renderCards(hits, clear = true) {
 function handleScroll() {
   const endOfPage =
     window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+  console.log('window.innerHeight', window.innerHeight);
+  console.log('window.pageYOffset', window.pageYOffset);
+  console.log('document.body.offsetHeight', document.body.offsetHeight);
   if (endOfPage) {
     if (imagesLoaded >= hits) {
       Notiflix.Notify.failure(
